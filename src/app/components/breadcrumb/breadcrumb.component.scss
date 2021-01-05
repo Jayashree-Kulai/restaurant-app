@@ -1,0 +1,43 @@
+@import '../../../../src/styles-variables.scss';
+@import '../../../../src/styles.scss';
+
+.container-fluid{
+    position: relative;   
+    background-color: #eee;
+    .container{
+        .d-flex{
+            //margin-left: 12%;
+            justify-content: left;
+            align-content: center;
+            align-items: center;
+            //line-height: 0.5rem;
+            ul.breadcrumb {
+                //padding: 10px 16px;
+                list-style: none;
+                background-color: #eee;
+                margin-bottom: 0rem;
+              }
+              ul.breadcrumb li {
+                display: inline;
+                font-family: "Open Sans";
+                font-size: 10px;
+                font-weight: bold; 
+                color: #3F3F40;
+                line-height: 17px;
+              }
+              ul.breadcrumb li+li:before {
+                padding: 8px;
+                color: rgb(243, 151, 30);
+                content: ">\00a0";
+              }
+              ul.breadcrumb li a {
+                color:#3F3F40;
+                text-decoration: none;
+              }
+              ul.breadcrumb li a:hover {
+                color: #01447e;
+                text-decoration: underline;
+              }
+        }
+    }
+}

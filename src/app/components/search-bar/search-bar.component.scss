@@ -1,0 +1,32 @@
+@import '../../../../src/styles.scss';
+@import '../../../../src/styles-variables.scss';
+.container-fluid{
+    position: relative;   
+    background-image: url("../../../assets/header-bg.jpeg");
+
+    .container{
+      .row{
+        p{
+          font-size: 10px;
+          margin-bottom: 1%;
+          margin-top: 2%;
+        }
+        .input-group{
+          margin-bottom: 5%;
+          background-color: white;
+        }
+        .input-group input{
+          border: 1px solid white;
+            //border-top-right-radius: 0.25rem;
+            //border-bottom-right-radius: 0.25rem;
+            border: none;
+          }
+        .input-group-text{
+          background-color: white;
+          border: none;
+          
+        }
+      }
+        
+    }
+}

@@ -1,0 +1,49 @@
+@import '../../../../../src/styles.scss';
+@import '../../../../../src/styles-variables.scss';
+
+
+.modal-content{
+    font-family: "Open Sans";
+    .modal-header{
+        border-bottom-color: rgb(251, 254, 255);
+        font-weight: 600;
+        .close{
+            padding: 0.3rem 0.3rem;
+        }
+        .datepicker {
+            z-index: 1400 !important; /* has to be larger than 1050 */
+          }
+
+    }
+
+    .modal-body{
+        
+        .md-form{
+                width: 95%
+        }
+
+        .schedule{   
+            .btn {
+                padding-right: 10%;
+                padding-left: 10%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                background: $orangeGradientBackground;
+                border: none;
+                color: white;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin-bottom: 3%;
+              }
+              .btn.focus{
+                box-shadow: 0 0 0 0.1rem wheat;
+            }
+              
+        }
+
+        
+    }
+}

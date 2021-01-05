@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="container">
+         <div class="row d-flex justify-content-left">
+            <div  (click)="underline('menu')">
+              MENU
+              <div *ngIf="page === 'menu'">
+                  <img src="../../../assets/underline.jpeg">
+              </div>
+            </div>
+
+            <div (click)="underline('overview')">
+                OVERVIEW
+                <div *ngIf="page === 'overview'">
+                    <img src="../../../assets/underline.jpeg">
+                </div>
+            </div>
+            <div  (click)="underline('review')">
+                REVIEWS & RATINGS
+                <div *ngIf="page === 'review'">
+                    <img src="../../../assets/underline.jpeg">
+                </div>
+            </div>
+            <div  (click)="underline('gallery')">
+                GALLERY
+                <div *ngIf="page === 'gallery'">
+                    <img src="../../../assets/underline.jpeg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
