@@ -13,8 +13,4 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // openSchedule(): void {
-  //   this.router.navigate(['schedule']);
-  // }
-
 }

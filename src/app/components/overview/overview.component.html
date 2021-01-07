@@ -86,27 +86,12 @@
                                 <p class="card-text time2">05:30:00 PM - 11:00:00 PM</p>
                                 <p class="card-text planned-off">Planned off: 03:00 PM - 05:30 PM (Ramadan)</p>
                             </div>
-                            <div class="col">
-                                <!-- <div ngbDropdown class="work-hour-block">
-                                    <button class="btn work-hour-details" id="dropdownBasic1" ngbDropdownToggle>Work
-                                        hours for next 7 days</button>
-                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                        <button ngbDropdownItem>Action - 1</button>
-                                        <button ngbDropdownItem>Another Action</button>
-                                        <button ngbDropdownItem>Something else is here</button>
-                                    </div>
-                                </div> -->
-                                <a class="btn work-hour-block" data-toggle="collapse" href="#multiCollapseExample1" id="headingOne"
-                                    role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
-                                    Work hours for next 7 days<i class="fas fa-chevron-down"
-                                        style="margin-left: 5px; color: #F5A623;"></i>
-                                </a>
-                            </div>
+
                             <div class="row">
                                 <div class="col">
                                     <div class="collapse multi-collapse" id="multiCollapseExample1"
                                         aria-labelledby="headingOne">
-                                        <div class="card card-body">
+                                        <div class="card card-body inner-card">
                                             <div class="line">
                                                 <p class="card-text date">Today, 25 March 2018 <b class="open">OPEN</b>
                                                 </p>
@@ -145,9 +130,18 @@
                                                 <p class="card-text time1">10:00:00 AM - 03:00:00 PM</p>
                                                 <p class="card-text time1">05:30:00 PM - 11:00:00 PM</p>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn work-hour-block" data-toggle="collapse" href="#multiCollapseExample1" id="headingOne"
+                                    role="button" aria-expanded="false" aria-controls="multiCollapseExample1" (click)="toggleArrow()">
+                                    Work hours for next 7 days
+                                    <i class={{arrow}}
+                                        style="margin-left: 5px; color: #F5A623;"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
