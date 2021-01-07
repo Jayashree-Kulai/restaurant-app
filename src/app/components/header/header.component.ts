@@ -7,12 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { 
+  public actions = ['English', 'Kannada', 'Hindi']
+  public dropdownItem: string;
+  constructor() {
+    this.dropdownItem = this.actions[0];
   }
 
   ngOnInit(): void {
   }
 
+  changeValue(item: string) {
+    this.dropdownItem = item;
+  }
   
   
 

@@ -1,56 +1,27 @@
 <div class="container-fluid">
-  <!-- container centers content on large screens -->
-  <!-- <div class="lane1 row">
-  
-  <div class="lorem col-md-6 d-flex justify-content-center">
-    <p class="letter gradient-text">LOREM</p>
-  </div>
-
-  <div class="col-md-1 d-flex justify-content-center">
-    <div class="btn-group">
-      <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false">
-        English
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="user-profile col-md-2 d-flex justify-content-center">   
-    <img class="user-image"
-      src="../../../assets/blank-profile-picture-.jpeg">
-      <p class="user-name">ASHLEY</p>
-  </div>
-
-  <div class="col-md-2 d-flex justify-content-center"> LOGOUT
-  </div>
-
-  <div class="cart col-md-1 d-flex justify-content-center"> 
-    <p class="cart-text">CART</p>
-  </div>
-</div> -->
-
-
   <div class="row lane1">
     <div class="col">
       <p class="letter">LOREM</p>
     </div>
     <div class="col-md-auto language d-flex justify-content-center">
-      <div class="btn-group">
+      <!-- <div class="btn-group">
         <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
           English
         </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-menu show">
+          <a class="dropdown-item" href="#">Hindi</a>
+          <a class="dropdown-item" href="#">Kannada</a>
+          <a class="dropdown-item" href="#">Malayalam</a>
         </div>
-      </div>
+      </div> -->
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn" id="dropdownBasic1" ngbDropdownToggle>{{dropdownItem}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem *ngFor="let item of actions" (click)="changeValue(item)">{{item}}</button>
+        </div>
+    </div>
+
     </div>
     <div class="col-md-auto d-flex justify-content-center">
       <div class="user-profile">
