@@ -20,8 +20,21 @@
                     img{
                         border-radius: 5%;
                     }
+                    .dish
+                    {
+                      position: relative;;
+                      z-index: 1;
+                    }
+                    .dish-type
+                    {
+                      position:absolute;
+                      bottom: 25px;
+                      left: 20px;
+                      z-index: 2;
+                    }
                 }
                 .card-body{
+                    
                     .card-title{
                         color: #223136;
                         font-size: 16px;
@@ -41,30 +54,28 @@
                     }
                 }
                 .stickers{
+
                     .already-in-cart{
                         p{
                             color: #49BB5C;
                             font-size: 10px;
+                            margin-left: 2rem;
                         }
                     }
                     .add-to-cart{
                         .btn-add {
+                            height: 2rem;
+                            border: 1px solid orange;
+                            border-radius: 1rem;
+                            box-shadow: 0 4px 10px 0 rgba(246,126,126,0.38);
                             font-family: "Open Sans";
                             font-size: 14px;
-                            color: rgba(58, 133, 191, 0.75);
+                            background-color: $orangeGradientBackground;
+                            @include gradient-text;
                             letter-spacing: 1px;
                             line-height: 15px;
-                            border: 1px solid rgba(58, 133, 191, 0.75);
-                            border-radius: 40px;
-                            background: transparent;
-                            transition: all 0.3s ease 0s;
-                            
-                            //border-image-source: $orangeGradientBackground;
-                          }
-                        .btn-add:hover {
-                            color: #FFF;
-                            background: $orangeGradientBackground;
-                            border: 1px solid rgba(58, 133, 191, 0.75);
+                            text-align: center;
+                            text-shadow: 0 4px 10px 0 rgba(246,126,126,0.38);
                           }
 
                     }
@@ -89,15 +100,6 @@
                     line-height: 19px;
                 }
                 
-                .recent{
-                    height: 19px;
-                    color: #F67E03;
-                    font-size: 14px;
-                    font-weight: 600;
-                    letter-spacing: 0;
-                    line-height: 19px;
-                    text-align: right;
-                }
             }
     
                 .recommended{
@@ -152,16 +154,102 @@
             .side{
                 margin-top: 2.5rem;
     
-                .card-title{
-                color: #000000;
-    
-                font-size: 22px;
-                font-weight: 600;
-                letter-spacing: -0.24px;
-                line-height: 30px;
-                padding: 1rem;
-    
-            }
+                .card-title{                   
+                    font-weight: 600;
+                    background-color: white;
+                    color: #000000;
+                    font-size: 22px;
+
+                    .clear-cart{
+                        padding-top: 0.5rem;
+                        float: right;
+                        color: #F57C00;
+                        font-size: 14px;
+                    }
+                }
+
+                .list-group{
+                    .list-group-item{
+                        margin-left: 4%;
+                        margin-right: 4%;
+                        padding-left: 0rem;
+                        padding-left: 0rem;
+                        
+                        .button{
+                            float: right;
+
+                            .btn-group{
+                                .decrement{
+                                    color:#6A6A6A;
+                                    border: 1px solid #CECFD4;
+                                    border-style: solid none solid solid;
+                                    border-top-left-radius: 40px;
+                                    border-bottom-left-radius: 40px;
+                                }
+                                .number{
+                                    border: 1px solid #CECFD4;
+                                    border-style: solid none solid none;  
+                                    color: #F67E03;    
+                                }
+                                .increment{ 
+                                    border: 1px solid #CECFD4;
+                                    border-style: solid solid solid none;
+                                    border-top-right-radius: 40px;
+                                    border-bottom-right-radius: 40px;
+                                }
+                            }
+
+                            .price-bold{
+                                padding-top: 5%;
+                                font-size: 12px;
+                                color: #2D2D2D;
+                                text-align: right;
+                                font-weight: 600;
+                            }
+
+                        }
+
+                        .details{
+                            .price{
+                                color: #2D2D2D;
+                                font-size: 12px;
+                            }
+                            .add-on{
+                                color: #9B9B9B;
+                                font-size: 11px;
+                            }
+                        }
+
+                        
+                        .customeize-dropdown{
+                            .btn{
+                                padding: 0rem;
+                            }
+                            a{
+                                color: #A08234;
+                                font-family: "Open Sans";
+                                font-size: 11px; 
+                                
+                            }
+
+                            .remove{
+                                padding-top:2%;
+                                color: #ED1B2E;
+                                font-size: 11px;
+                                font-weight: 600;
+                            }
+                        }
+
+                        .to-pay{
+                            display: inline-block;
+                            padding-top: 0.5rem;
+                        }
+                        .card-body-to-pay{
+                            color: #9B9B9B;
+                            font-size: 12px;
+                        }
+                    }
+                }
     
             .food{
                 height: 22px;
@@ -189,28 +277,12 @@
                 height: 2px;
                 border: 1px solid #EDEDED;
                 }
-            .save{
-                text-align: right;
-                padding-right: 3%;
-    
-                img{
-                    padding-right: 2%;
-                }
-    
-                .saved{
-                    height: 17px;
-                    width: 34px;
-                    color: #223136;
-    
-                    font-size: 12px;
-                    letter-spacing: 0;
-                    line-height: 17px;
-                }
-            }
+
     
             .input-text{
-                width: 170px;
-                margin-left: 6%;
+                width: 85%;
+                margin-left: 3%;
+                margin-bottom: 0%;
             }
     
             .addimage{
@@ -225,7 +297,9 @@
                 border: none;
                 height: 50px;
                 border-radius: 1rem;
-                margin: 5%;
+                margin:3%;
+                font-size: 14px;
+                font-weight: bold;
                 text-decoration: none;
             }
             }

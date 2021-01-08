@@ -19,14 +19,48 @@
           </div>
           <div>
             <div class="md-form">
-              <input placeholder="Selected date" type="text" id="date-picker-example" class="form-control datepicker">
+              <form class="form-inline">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control select-date" placeholder="Select date"
+                           name="dp" [(ngModel)]="model" ngbDatepicker [dayTemplate]="customDay" [markDisabled]="isDisabled" #d="ngbDatepicker">
+                    <div class="input-group-append">
+                      <button class="btn calendar" (click)="d.toggle()" type="button" style="color:#F67E03">Change</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <ng-template #customDay let-date let-currentMonth="currentMonth" let-selected="selected" let-disabled="disabled" let-focused="focused">
+                <span class="custom-day" [class.weekend]="isWeekend(date)" [class.focused]="focused"
+                      [class.bg-primary]="selected" [class.hidden]="date.month !== currentMonth" [class.text-muted]="disabled">
+                  {{ date.day }}
+                </span>
+              </ng-template>
+              <!-- <input placeholder="Selected date" type="text" id="date-picker-example" class="form-control datepicker"> -->
               <!-- <label for="date-picker-example">Try me...</label> -->
             </div>  
 
             
             <div class="md-form">
-              <input placeholder="Selected time" type="text" id="input_starttime" class="form-control timepicker">
-              <!-- <label for="input_starttime">Light version, 12hours</label> -->
+              <form class="form-inline">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control select-date" placeholder="Select Time"
+                           name="dp" [(ngModel)]="model" ngbDatepicker [dayTemplate]="customDay" [markDisabled]="isDisabled" #d="ngbDatepicker">
+                    <div class="input-group-append">
+                      <button class="btn calendar" (click)="d.toggle()" type="button" style="color:#F67E03">Change</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <ng-template #customDay let-date let-currentMonth="currentMonth" let-selected="selected" let-disabled="disabled" let-focused="focused">
+                <span class="custom-day" [class.weekend]="isWeekend(date)" [class.focused]="focused"
+                      [class.bg-primary]="selected" [class.hidden]="date.month !== currentMonth" [class.text-muted]="disabled">
+                  {{ date.day }}
+                </span>
+              </ng-template>
+              <!-- <input placeholder="Selected time" type="text" id="input_starttime" class="form-control timepicker">
+              <label for="input_starttime">Light version, 12hours</label> -->
             </div>
           </div>
 

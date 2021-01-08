@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import {NgbCalendar, NgbDate, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 declare var $: any;
 
 
@@ -8,15 +9,22 @@ declare var $: any;
   styleUrls: ['./schedule.component.scss']
 })
 export class ScheduleComponent implements OnInit {
+  model: NgbDateStruct;
 
-  constructor(private _elmRef: ElementRef) { }
+  constructor(private calendar: NgbCalendar) {
+    this.model= {
+      "year": 2018,
+      "month": 8,
+      "day": 15
+    }
+   }
 
   ngOnInit(): void {
-   // Data Picker Initialization
-$('.datepicker').pickadate();
-// Time Picker Initialization
-$('#input_starttime').pickatime({});
   }
+
+
+  isDisabled = (date: NgbDate, current: {month: number, year: number}) => date.month !== current.month;
+  isWeekend = (date: NgbDate) =>  this.calendar.getWeekday(date) >= 6;
   
 
 }

@@ -19,7 +19,11 @@
     .modal-body{
         
         .md-form{
-                width: 95%
+                width: 95%;
+                .select-date{
+                    width:380px;
+                    border-style: none none solid none;
+                }
         }
 
         .schedule{   
