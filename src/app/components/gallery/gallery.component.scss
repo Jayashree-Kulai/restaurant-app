@@ -59,6 +59,25 @@
             @include gradient-text;
         }
     }
+
+    .add-to-cart{
+        
+        .btn-add {
+            width: 87px;
+            border: 1px solid orange;
+            border-radius: 1rem;
+            box-shadow: 0 4px 10px 0 rgba(246,126,126,0.38);
+            font-family: "Open Sans";
+            font-size: 14px;
+            background-color: $orangeGradientBackground;
+            @include gradient-text;
+            letter-spacing: 1px;
+            line-height: 15px; 
+            text-align: center;
+            text-shadow: 0 4px 10px 0 rgba(246,126,126,0.38);
+        }
+        
+        }
 }
 
 .imgDisplay{
