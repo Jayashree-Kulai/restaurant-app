@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -15,6 +16,15 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
+
+
+
+import { FooterComponent } from './components/footer/footer.component';
+import { ResturantBackgroundComponent } from './components/resturant-background/resturant-background.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { ReviewRatingComponent } from './components/review-rating/review-rating.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +35,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ScheduleComponent,
     OverviewComponent,
     MenuComponent,
+    FooterComponent,
+    ResturantBackgroundComponent,
+    GalleryComponent,
+    ReviewRatingComponent
   ],
   imports: [
     BrowserModule,

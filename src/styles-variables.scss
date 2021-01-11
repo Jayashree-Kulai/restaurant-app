@@ -1,3 +1,4 @@
+
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -10,3 +11,10 @@ $orangeGradientBackground: linear-gradient(138.33deg, #F3698E 0%, #FEB456 100%);
 
 $header-shadow: 0 10px 12px 0 rgba(155, 148, 148, 0.14);
 $color-white: #FFFFFF;
+
+
+//basic colors
+$orangeGradientBackground:  linear-gradient(138.33deg, #F3698E 0%, #FEB456 100%);
+$footerBackground :#FFFFFF;
+$boxShadow: 0 1px 12px 0 rgba(20, 20, 20, 0.14);
+
