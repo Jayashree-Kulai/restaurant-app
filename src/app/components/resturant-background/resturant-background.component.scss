@@ -59,6 +59,7 @@
             border-radius: 4px;
             background-color: #5FB700;
             height: 23px;
+            width: 42px;
 
            .ratingFourPointThree{
               color: #FFFFFF;
@@ -92,6 +93,7 @@
          }
       }
         .deliveryRating{
+          height: 22px;
           padding-left: 5%;
           color: #6A6A6A;
           font-family: "Open Sans";
@@ -101,9 +103,10 @@
 
        .drawLine{
           padding-left: 5%;
+          padding-bottom: 2%;
 
         .line{
-           height: 3px;
+           height: 2px;
            width: 278px;
            border: 1px solid #EDEDED;
         }

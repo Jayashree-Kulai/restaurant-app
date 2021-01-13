@@ -6,7 +6,12 @@
     .container{
         font-family: 'Open Sans', sans-serif;
         color: #4A4A4A;
+        padding: 0;
         .text{
+            input{
+                border-bottom: 0px solid #ced4da;
+                margin-top: 2%;
+            }
             .heading{
                 padding-top: 0.5rem;
                 padding-bottom: 0.5rem;
@@ -28,7 +33,7 @@
                     .dish-type
                     {
                       position:absolute;
-                      bottom: 25px;
+                      bottom: 30px;
                       left: 20px;
                       z-index: 2;
                     }
@@ -49,6 +54,7 @@
                         font-size: 11px;
                     }
                     .description{
+                        padding: 0px;
                         color: #9B9B9B;
                         font-size: 12px;
                     }
@@ -63,6 +69,7 @@
                         }
                     }
                     .add-to-cart{
+                        
                         .btn-add {
                             height: 2rem;
                             border: 1px solid orange;
@@ -173,7 +180,7 @@
                         margin-left: 4%;
                         margin-right: 4%;
                         padding-left: 0rem;
-                        padding-left: 0rem;
+                        padding-right: 0rem;
                         
                         .button{
                             float: right;
@@ -280,6 +287,10 @@
 
     
             .input-text{
+                input{
+                    color: #858585;
+                    padding-left: 0rem;
+                }
                 width: 85%;
                 margin-left: 3%;
                 margin-bottom: 0%;
@@ -296,7 +307,7 @@
                 color: white;
                 border: none;
                 height: 50px;
-                border-radius: 1rem;
+                border-radius: 6px;
                 margin:3%;
                 font-size: 14px;
                 font-weight: bold;

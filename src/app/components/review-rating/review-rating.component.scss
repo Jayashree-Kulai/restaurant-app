@@ -1,9 +1,13 @@
 @import '../../../styles-variables';
 @import '../../../styles.scss';
 
-.header{
+.container-fluid{
     background-color: #E3E6F0;
-    margin-top: 2rem;
+}
+.header{
+    padding: 0;
+    background-color: #E3E6F0;
+    padding-top: 2rem;
     margin-bottom: 3rem;
     .text{
 
@@ -145,13 +149,16 @@
                 }
 
                 .line{
+                    margin-right: 6%;
+                    margin-left: 6%;
+                    margin-top: 4%;
                     box-sizing: border-box;
                     height: 2px;
                     border: 1px solid #EDEDED;
                 }
                 .save{
                     text-align: right;
-                    padding-right: 3%;
+                    padding-right: 6%;
 
                     img{
                         padding-right: 2%;
@@ -184,7 +191,7 @@
                     color: white;
                     border: none;
                     height: 50px;
-                    border-radius: 1rem;
+                    border-radius: 6px;
                     margin: 5%;
                     text-decoration: none;
                 }

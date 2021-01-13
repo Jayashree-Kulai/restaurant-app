@@ -1,10 +1,13 @@
 @import '../../../styles-variables';
 @import '../../../styles.scss';
 
-
+.container-fluid{
+    background-color: #E3E6F0;
+}
 .main{
     background-color: #E3E6F0;;
     border: none;
+    padding: 0;
 
     .allPhotos{
         padding: 1%;
@@ -39,7 +42,8 @@
 
     .gallery{
         display: inline-flex;
-        padding: 10px;
+        padding-right: 25px;
+        padding-bottom: 15px;
         img{
             width: 160px;
             height: 130px;   

@@ -3,8 +3,9 @@
         <div class="row text">
             <div class="col-md-8" style="margin-top:3.5%;">
                 <div class="row form-inline d-flex md-form form-sm mt-0 search-bar" style="background-color: white;margin-left: 0.3%;margin-right: 0.3%;">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                    <i class="fas fa-search" aria-hidden="true" style="margin-left: 20px; color: #6F6F6F;"></i>
+                    <!-- <img src="../../../assets/icn_search_home copy.jpeg" style="background-color:white"> -->
+                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search an item"
                         aria-label="Search">
                 </div>
 
@@ -16,12 +17,12 @@
                     <div class="row no-gutters">
                         <div class="col-md-3 photo" *ngIf="item.imageUrl">
                             <img [src]="item.imageUrl" width="100%" height="140rem" alt="Meal" class="dish">
-                            <img src="https://img.icons8.com/color/25/000000/non-vegetarian-food-symbol.png" class="dish-type">
+                            <img src="https://img.icons8.com/color/23/000000/non-vegetarian-food-symbol.png" class="dish-type">
                         </div>
 
                         <div class="col">
                             <div class="card-body">
-                                <p class="card-title" *ngIf="!item.imageUrl"><img src="https://img.icons8.com/color/25/000000/vegetarian-food-symbol.png" />{{ item.title }}</p>
+                                <p class="card-title" *ngIf="!item.imageUrl"><img src="https://img.icons8.com/color/23/000000/vegetarian-food-symbol.png" />{{ item.title }}</p>
                                 
                                 <p class="card-title" *ngIf="item.imageUrl">{{ item.title }}</p>
                                 <div class="best-seller" style="float: right;">
@@ -295,7 +296,7 @@
 
                     <div class="md-form input-text">
                         <input mdbInput type="text" placeholder="Mention it here…" id="form1" class="form-control"
-                            style="color: #858585;">
+                            >
                         <label for="form1" class="">Cooking instructions?</label>
                     </div>
                     <button type="button" class="submit">PROCEED TO CHECKOUT <i class="fas fa-angle-right"></i></button>
