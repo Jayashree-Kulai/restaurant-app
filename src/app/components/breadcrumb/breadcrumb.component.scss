@@ -5,14 +5,10 @@
     position: relative;   
     background-color: #eee;
     .container{
+      padding: 0;
         .d-flex{
-            //margin-left: 12%;
-            justify-content: left;
-            align-content: center;
-            align-items: center;
-            //line-height: 0.5rem;
             ul.breadcrumb {
-                //padding: 10px 16px;
+                padding-left: 0;
                 list-style: none;
                 background-color: #eee;
                 margin-bottom: 0rem;
