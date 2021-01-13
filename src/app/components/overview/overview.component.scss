@@ -3,7 +3,7 @@
 
 .container-fluid{
     background-color: #E3E6F0;
-    
+    padding-bottom: 0.1px;
     .container{
         padding: 0;
         font-family: 'Open Sans', sans-serif;
@@ -52,6 +52,7 @@
                         padding-top: 5%;
                     }
                     .date{
+                        margin-bottom: 0.1rem;
                         b{
                             float: right;
                             font-weight: bold;
@@ -65,18 +66,16 @@
 
                     }
     
-                    .time1{
-                        margin-bottom: 0rem;
-                    }
-    
                     .time1,
                     .time2{
+                        margin-bottom: 0rem;
                         font-size: 14px;
                         font-weight: 600;
                         color: #4A4A4A;
                     }
     
                     .planned-off{
+                        margin-top: 1rem;
                         color: #ED1B2E;
                     }
     

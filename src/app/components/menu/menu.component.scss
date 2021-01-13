@@ -33,7 +33,7 @@
                     .dish-type
                     {
                       position:absolute;
-                      bottom: 30px;
+                      bottom: 25px;
                       left: 20px;
                       z-index: 2;
                     }
@@ -54,12 +54,22 @@
                         font-size: 11px;
                     }
                     .description{
+                        margin-bottom: 0rem;
+                        display: block;
+                        line-height: 17px;
                         padding: 0px;
                         color: #9B9B9B;
                         font-size: 12px;
+                        padding-bottom: 0rem;
                     }
                 }
                 .stickers{
+
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    padding-bottom: 2%;
+                    padding-right: 2%;
 
                     .already-in-cart{
                         p{
@@ -71,6 +81,7 @@
                     .add-to-cart{
                         
                         .btn-add {
+                            width: 106px;
                             height: 2rem;
                             border: 1px solid orange;
                             border-radius: 1rem;
