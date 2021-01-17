@@ -4,4 +4,5 @@ export interface Appetizer {
     customizable: string;
     description: string;
     imageUrl: string;
-  }
+    addButtonText: string;
+}

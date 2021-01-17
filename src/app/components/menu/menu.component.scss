@@ -90,7 +90,6 @@
                             font-size: 14px;
                             background-color: $orangeGradientBackground;
                             @include gradient-text;
-                            letter-spacing: 1px;
                             line-height: 15px;
                             text-align: center;
                             text-shadow: 0 4px 10px 0 rgba(246,126,126,0.38);
@@ -172,7 +171,8 @@
             .side{
                 margin-top: 2.5rem;
     
-                .card-title{                   
+                .card-title{ 
+                    padding: 0.75rem 1rem;                  
                     font-weight: 600;
                     background-color: white;
                     color: #000000;
@@ -195,7 +195,7 @@
                         
                         .button{
                             float: right;
-
+                            
                             .btn-group{
                                 .decrement{
                                     color:#6A6A6A;
@@ -218,6 +218,8 @@
                             }
 
                             .price-bold{
+                                // position: absolute;
+                                // float:left;
                                 padding-top: 5%;
                                 font-size: 12px;
                                 color: #2D2D2D;
@@ -229,6 +231,8 @@
 
                         .details{
                             .price{
+                                // //position: absolute;
+                                // float:left;
                                 color: #2D2D2D;
                                 font-size: 12px;
                             }

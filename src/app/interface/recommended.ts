@@ -6,4 +6,5 @@ export interface Recommended {
     description:string;
     inCart:string;
     imageUrl:string;
+    addButtonText:string;
   }

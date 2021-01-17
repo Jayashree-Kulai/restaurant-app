@@ -5,6 +5,9 @@ import { Appetizer } from '../interface/appetizer';
 import { APPETIZERS } from '../components/menu/appetizer-mock-list';
 import { Soup } from '../interface/soup';
 import { SOUPS } from '../components/menu/soup-mock-list';
+import { CART } from '../components/menu/cart-mock-list';
+import { Cart } from '../interface/cart';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,5 +24,9 @@ export class MenuService {
 
   getAllSoups(): Soup[] {
     return SOUPS;
+  }
+
+  getCartItems(): Cart[] {
+    return CART;
   }
 }

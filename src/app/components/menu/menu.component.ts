@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Recommended } from '../../interface/recommended';
 import { Appetizer } from '../../interface/appetizer';
 import { Soup } from '../../interface/soup';
+import { Cart } from '../../interface/cart';
 
 @Component({
   selector: 'app-menu',
@@ -12,29 +13,25 @@ import { Soup } from '../../interface/soup';
 })
 export class MenuComponent implements OnInit {
 
-  recommended: Recommended = {
-    title: '',
-    price: '',
-    customizable: '',
-    description: '',
-    inCart: '',
-    imageUrl: ''
-  }
-
   recommendedList: Recommended[];
   appetizerList: Appetizer[];
   soupList: Soup[];
+  cart: Cart[];
+
+  count: number = 1;
 
   constructor(private router: Router, private menuService: MenuService) { 
     this.recommendedList = [];
     this.appetizerList = [];
     this.soupList = [];
+    this.cart = [];
   }
 
   ngOnInit(): void {
     this.getAllRecommended();
     this.getAllAppetizers();
     this.getAllSoups();
+    this.getCartItems();
   }
 
   getAllRecommended(): void {
@@ -50,4 +47,47 @@ export class MenuComponent implements OnInit {
     this.soupList = this.menuService.getAllSoups();
     
   }
+
+  getCartItems(): void {
+    this.cart = this.menuService.getCartItems();
+  }
+
+  addRecommendedToCart(item : Recommended) : void {
+    item.addButtonText = "ADD AGAIN";
+    item.inCart = "Already in Cart";
+    const tempItem: Cart = { 
+      title : item.title,
+      price : item.price
+     };
+    this.cart.unshift(tempItem);
+  }
+
+  addAppetizerToCart(item : Appetizer) : void {
+    item.addButtonText = "ADD AGAIN";
+    const tempItem: Cart = { 
+      title : item.title,
+      price : item.price
+     };
+    this.cart.unshift(tempItem);
+  }
+
+  addSoupToCart(item : Appetizer) : void {
+    item.addButtonText = "ADD AGAIN";
+    const tempItem: Cart = { 
+      title : item.title,
+      price : item.price
+     };
+    this.cart.unshift(tempItem);
+  }
+
+  incrementItemCount() : void {
+    this.count++;
+  }
+
+  decrementItemCount() : void {
+    if(this.count != 0){
+      this.count--;
+    }   
+  }
+  
 }

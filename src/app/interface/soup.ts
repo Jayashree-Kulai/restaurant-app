@@ -4,4 +4,5 @@ export interface Soup {
     customizable: string;
     description: string;
     imageUrl: string;
+    addButtonText: string;
   }
