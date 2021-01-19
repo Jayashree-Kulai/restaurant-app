@@ -137,7 +137,7 @@
                 <div class="card side">
                     <span class="card-title card-header">
                         My Order
-                        <span class="clear-cart">Clear cart</span>
+                        <span class="clear-cart" (click)="clearCart()">Clear cart</span>
                     </span>
                     <ul class="list-group list-group-flush">
                         <!-- <li class="list-group-item">
@@ -191,9 +191,9 @@
                                 <span class="button">
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <button type="button" class="btn decrement"><i
-                                                class="fas fa-minus" (click) = "decrementItemCount()"></i></button>
-                                        <button type="button" class="btn number">{{count}}</button>
-                                        <button type="button" class="btn increment" (click) = "incrementItemCount()"><i class="fas fa-plus"
+                                                class="fas fa-minus" (click) = "decrementItemCount(item)"></i></button>
+                                        <button type="button" class="btn number">{{item.count}}</button>
+                                        <button type="button" class="btn increment" (click) = "incrementItemCount(item)"><i class="fas fa-plus"
                                                 style="color:#F67E03"></i></button>
                                     </div>
                                     <div class="price-bold">
@@ -224,7 +224,7 @@
                             </diV>
                         </li>
 
-                        <li class="list-group-item">
+                        <!-- <li class="list-group-item">
                             <diV>
                                 <span class="dish-title">
                                     <img src="../../../assets/vegIcon.jpeg" />
@@ -262,9 +262,9 @@
                                     </div>
                                 </div>
                             </diV>
-                        </li>
+                        </li> -->
 
-                        <li class="list-group-item">
+                        <!-- <li class="list-group-item">
                             <diV>
                                 <span class="dish-title">
                                     <img src="../../../assets/nonVegIcon.jpeg" />
@@ -304,7 +304,7 @@
                                     </div>
                                 </div>
                             </diV>
-                        </li>
+                        </li> -->
 
                         <li class="list-group-item">
                             <div class="card">

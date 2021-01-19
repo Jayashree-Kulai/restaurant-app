@@ -9,50 +9,11 @@
                         <p class="recent">Recent <i class="fa fa-long-arrow-down"></i></p>
                     </div>
                 </div>
-                <div class="card rating">
+                <div class="card rating" *ngFor="let item of reviewRating; index as i">
                     <div class="profile">
                         <div class="profilepic">
-                            <img class="shadow-lg rounded-circle" src="../../../assets/profile/winston.jpg"
-                                alt="user profile">
-                        </div>
-                        <div class="details">
-                            <span class="username">Winston Roy</span> <br>
-                            <span class="reviewrating">2 reviews, 30 ratings</span><br>
-                            <img src="../../../assets/Rating 4.png" alt="rating 4" />
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <p class="card-text">Offers homely and delicious Indian food choices. The rajma chawal, chana
-                            bhature, pav bhaaji, kheer and paan mint shisha are all great. The service is good and staff
-                            are
-                            friendly. We also liked their playlist, it was a mix of Indian and Western songs.</p>
-                    </div>
-                    <div class="card-footer footer">
-                        <div class="date">March 15, 2018</div>
-                        <div class="like">
-                            <i class="fas fa-thumbs-up"> <span class="likes">45</span></i>
-                        </div>
-                    </div>
-                    <div class="row reviewImage">
-                        <div>
-                            <img class="review" src="../../../assets/review/image copy.png" alt="revieImage1" />
-                        </div>
-                        <div>
-                            <img class="review" src="../../../assets/review/image copy 2.png" alt="revieImage2" />
-                        </div>
-                        <div>
-                            <img class="review" src="../../../assets/review/image copy.png" alt="revieImage3" />
-                        </div>
-                        <div>
-                            <img class="review" src="../../../assets/review/image copy 2.png" alt="revieImage4" />
-                        </div>
-                    </div>
-                </div>
-                <div class="card rating" *ngFor="let item of reviewRating">
-                    <div class="profile">
-                        <div class="profilepic">
-                            <img class="shadow-lg rounded-circle" [src]="item.imageurl" alt="user profile">
+                            <img class="shadow-lg rounded-circle" [src]="item.imageurl" alt="user profile"
+                                onerror="this.onerror=null; this.src='../../../assets/profile/user-profile3.jpeg'">
                         </div>
                         <div class="details">
                             <span class="username">{{ item.name }}</span> <br>
@@ -65,9 +26,17 @@
                         <p class="card-text">{{ item.comment }}</p>
                     </div>
                     <div class="card-footer footer">
-                        <div class="date">{{ item.date }}</div>
+                        <div class="date">{{ item.date | date }}</div>
                         <div class="like">
-                            <i class="fas fa-thumbs-up"> <span class="likes">{{ item.like }}</span></i>
+                            <div (click)="onClick(item)">
+                                <i class="fas fa-thumbs-up" [ngStyle]="{'color': item.likeIconColor}">
+                                    <span class="likes">{{ item.like }}</span></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row reviewImage" *ngIf="item.reviewImage">
+                        <div *ngFor="let photo of item.reviewImage; index as i">
+                            <img class="review" [src]="photo" alt="revieImage1" />
                         </div>
                     </div>
                 </div>
@@ -76,62 +45,52 @@
             <div class="col-md-4">
                 <div class="card side">
                     <h5 class="card-title">Rate your experience</h5>
-                    <span class="food">Food</span>
-                    <div class="row ratingImage">
-                        <div>
-                            <img class="rate" src="../../../assets/GRating 1.png" alt="rating 1" />
-                        </div>
-                        <div>
-                            <img class="rate" src="../../../assets/GRating 2.png" alt="rating 2" />
-                        </div>
-                        <div>
-                            <img class="rate" src="../../../assets/GRating 3.png" alt="rating 3" />
-                        </div>
-                        <div>
-                            <img class="rate" src="../../../assets/GRating 4.png" alt="rating 4" />
-                        </div>
-                        <div>
-                            <img class="rate" src="../../../assets/Rating 5.png" alt="rating 5" />
-                        </div>
-                    </div><br>
-                    <div class="line"></div>
-                    <div class="save">
-                        <img src="../../../assets/icn_check.png" alt="saved" />
-                        <span class="saved">saved</span>
-                    </div>
+                    <div class="foodTab">
+                        <span class="food">Food</span>
+                        <div class="row ratingFood">
+                            <div *ngFor="let i of arrayFood;let in =index">
+                                <i class="fa fa-star iconFood" (click)="onClickItemFood(in)"
+                                    [ngClass]="{selected:in <= selectedFoodRate}"> {{i}}</i>
+                            </div>
+                        </div><br>
 
-                    <span class="food">Service</span>
-                    <div class="row ratingImage">
-                        <div>
-                            <img class="rate" src="../../../assets/GRating 1.png" alt="rating 4" />
+                        <div class="line"></div>
+                        <div class="save" *ngIf="foodSelected">
+                            <img src="../../../assets/icn_check.png" alt="saved" />
+                            <span class="saved">saved</span>
                         </div>
-                        <div>
-                            <img class="rate" src="../../../assets/GRating 2.png" alt="rating 4" />
+                    </div>
+                    <div class="serviceTab">
+                        <span class="food">Service</span>
+                        <div class="row ratingService">
+                            <div *ngFor="let i of arrayService;let j =index">
+                                <i class="fa fa-star iconService" (click)="onClickItemService(j)"
+                                    [ngClass]="{select:j <= selectedServiceRate}"> {{i}}</i>
+                            </div>
+                        </div><br>
+                        <div class="line"></div>
+                        <div class="save" *ngIf="serviceSelected">
+                            <img src="../../../assets/icn_check.png" alt="saved" />
+                            <span class="saved">saved</span>
                         </div>
-                        <div>
-                            <img class="rate" src="../../../assets/GRating 3.png" alt="rating 3" />
-                        </div>
-                        <div>
-                            <img class="rate" src="../../../assets/GRating 4.png" alt="rating 4" />
-                        </div>
-                        <div>
-                            <img class="rate" src="../../../assets/Rating 5.png" alt="rating 2" />
-                        </div>
-                    </div><br>
-                    <div class="line"></div>
-                    <div class="save">
-                        <img src="../../../assets/icn_check.png" alt="saved" />
-                        <span class="saved">saved</span>
                     </div>
                     <div class="md-form input-text">
-                        <input mdbInput type="text" placeholder="Start writing your review" id="form1"
-                            class="form-control">
+                        <input mdbInput type="text" [(ngModel)]="review.comment" placeholder="Start writing your review"
+                            id="form1" name="comment" class="form-control">
                         <label for="form1" class="">Write a review</label>
                     </div>
+
                     <div class="addimage">
-                        <span class="addimage">+ Add image</span>
+                        <span class="addimage" (click)="selectImage()">+ Add image</span>
                     </div>
-                    <button type="button" class="submit">Submit</button>
+                    <div class="chooseImage" *ngIf="imageFlag">
+                        <input type="file" multiple (change)="detectFiles($event)">
+                        <div *ngFor="let url of urls">
+                            <img [src]="url" class="rounded mb-3">
+                            <input type="hidden" [(ngModel)]="review.reviewImage" name="reviewImage" value="url">
+                        </div>
+                    </div>
+                    <button type="button" class="submit" (click)="saveReview()">Submit</button>
                 </div>
             </div>
         </div>

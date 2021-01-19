@@ -4,7 +4,9 @@ export interface Reviewrating {
     rating: number;
     star:number;
     comment:string;
-    date:string;
-    like:number,
-    imageurl:string
+    date:Date;
+    like:number;
+    imageurl:string;
+    likeIconColor:string;
+    reviewImage:string [];
   }

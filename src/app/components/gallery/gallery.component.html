@@ -1,46 +1,44 @@
 <div class="container-fluid">
-<div class="container main">
+    <div class="container main">
 
-    <div class="allPhotos">
-        <p>All Photos</p>
-        <p>
-            <img class="arrow" src="../../../assets/right_arrow.png" alt="right-arrow" />
-        </p>
-    </div>
-
-    <br>
-    <div class="pictures">
-        <div class="gallery" *ngFor="let img of imagelist">
-            <!-- <a routerLink="/movies/{{movie.id}}"> -->
-            <img class="image" [src]="img.imageUrl" alt="" (click)="openOverlay(img.id)">
-            <!-- </a> -->
-        </div>
-    </div>
-    <br>
-
-    <div class="viewMore"><br>
-        <p class="corner">View more ></p>
-    </div>
-</div>
-
-<div class="container imgDisplay" *ngIf="display">
-    <div class="cancel">
-        <img class="image" src="../../../assets/cancel.png" alt="cancel" (click)="closeOverlay()">
-    </div>
-    <div class="container displayImage">
-        <img [src]="image.imageUrl" alt="" class="img-fluid mx-auto d-block">
-    </div>
-    <div class="row naming">
-        <div class="col-md-6 content float-left ">
-            <p>{{image.name}}</p>
-        </div>
-        <div class="col text-right">
-            <p class="pager">
-                <a href="#" class="previous">&laquo;</a>
-                <a href="#" class="next">&raquo;</a>
+        <div class="allPhotos">
+            <p (click)="allPhotos()">All Photos</p>
+            <p>
+                <img class="arrow" src="../../../assets/right_arrow.png" alt="right-arrow" />
             </p>
         </div>
+
+        <br>
+        <div class="pictures">
+            <div class="gallery" *ngFor="let img of imagelist;let i=index">
+                <img class="image" *ngIf="i < num" [src]="img.imageUrl" alt="" (click)="openOverlay(img.id)">
+            </div>
+        </div>
+        <br>
+
+        <div class="viewMore"><br>
+            <p class="corner" (click)="viewMore()">View more ></p>
+        </div>
     </div>
-</div>
-<div class="overlay" *ngIf="!overlay"></div>
+
+    <div class="container imgDisplay" *ngIf="display">
+        <div class="cancel">
+            <img class="image" src="../../../assets/cancel.png" alt="cancel" (click)="closeOverlay()">
+        </div>
+        <div class="container displayImage">
+            <img [src]="image.imageUrl" alt="" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="row naming">
+            <div class="col-md-6 content float-left ">
+                <p>{{image.name}}</p>
+            </div>
+            <div class="col text-right">
+                <p class="pager">
+                    <a href="#" class="previous" (click)="previous(image.id)">&laquo;</a>
+                    <a href="#" class="next" (click)="next(image.id)">&raquo;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" *ngIf="!overlay"></div>
 </div>

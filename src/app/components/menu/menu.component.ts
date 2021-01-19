@@ -57,7 +57,8 @@ export class MenuComponent implements OnInit {
     item.inCart = "Already in Cart";
     const tempItem: Cart = { 
       title : item.title,
-      price : item.price
+      price : item.price,
+      count : 1
      };
     this.cart.unshift(tempItem);
   }
@@ -66,7 +67,8 @@ export class MenuComponent implements OnInit {
     item.addButtonText = "ADD AGAIN";
     const tempItem: Cart = { 
       title : item.title,
-      price : item.price
+      price : item.price,
+      count : 1
      };
     this.cart.unshift(tempItem);
   }
@@ -75,19 +77,24 @@ export class MenuComponent implements OnInit {
     item.addButtonText = "ADD AGAIN";
     const tempItem: Cart = { 
       title : item.title,
-      price : item.price
+      price : item.price,
+      count : 1
      };
     this.cart.unshift(tempItem);
   }
 
-  incrementItemCount() : void {
-    this.count++;
+  incrementItemCount(item: Cart) : void {
+    item.count++;
   }
 
-  decrementItemCount() : void {
-    if(this.count != 0){
-      this.count--;
+  decrementItemCount(item: Cart) : void {
+    if(item.count != 0){
+      item.count--;
     }   
+  }
+
+  clearCart() : void {
+      this.cart.splice(0,this.cart.length);  
   }
   
 }
