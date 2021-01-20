@@ -182,7 +182,7 @@
                             </diV>
                         </li> -->
 
-                        <li class="list-group-item" *ngFor="let item of cart">
+                        <li class="list-group-item" *ngFor="let item of cart; let i = index">
                             <diV>
                                 <span class="dish-title">
                                     <img src="../../../assets/nonVegIcon.jpeg" />
@@ -212,7 +212,7 @@
                                         role="button" aria-expanded="false" aria-controls="collapseExample">
                                         Customize <i class="fas fa-angle-down" style="color: #F57C00;"></i>
                                     </a>
-                                    <div class="remove" style="float: right;">Remove</div>
+                                    <div class="remove" style="float: right;" (click) = "remove(item)">Remove</div>
                                     <div class="collapse" id="collapseExample2">
                                         <div class="card card-body">
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry

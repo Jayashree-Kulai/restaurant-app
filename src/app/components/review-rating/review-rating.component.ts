@@ -95,11 +95,9 @@ export class ReviewRatingComponent implements OnInit {
         reader.readAsDataURL(file);
       }
     }
-    console.log("url iss.....", this.urls)
   }
 
   saveReview(): void {
-    //this.phone.id = this.getRandomString();
     const TempReview: Reviewrating = { ...this.review };
     this.reviewRating.unshift(TempReview)
   }

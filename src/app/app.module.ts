@@ -23,6 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ResturantBackgroundComponent } from './components/resturant-background/resturant-background.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ReviewRatingComponent } from './components/review-rating/review-rating.component';
+import { HomeComponent } from './components/part2/home/home.component';
+import { PopularBrandsComponent } from './components/part2/popular-brands/popular-brands.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { ReviewRatingComponent } from './components/review-rating/review-rating.
     FooterComponent,
     ResturantBackgroundComponent,
     GalleryComponent,
-    ReviewRatingComponent
+    ReviewRatingComponent,
+    HomeComponent,
+    PopularBrandsComponent
   ],
   imports: [
     BrowserModule,

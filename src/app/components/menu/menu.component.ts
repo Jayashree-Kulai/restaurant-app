@@ -93,6 +93,14 @@ export class MenuComponent implements OnInit {
     }   
   }
 
+  remove(food: Cart) : void {
+    this.cart.forEach((item, index) => {
+      if (item === food) {
+        this.cart.splice(index, 1)
+      }
+    })
+  }
+
   clearCart() : void {
       this.cart.splice(0,this.cart.length);  
   }

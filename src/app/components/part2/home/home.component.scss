@@ -1,0 +1,77 @@
+@import '../../../../../src/styles.scss';
+@import '../../../../../src/styles-variables.scss';
+
+.container-fluid {
+    background-image: url("../../../../assets/BG1.jpeg");
+    background-size: cover;
+    z-index: -1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    font-family: "Open Sans";
+    .container {
+      .order-your-food-from{
+        margin-bottom: 4rem;
+        padding-top: 200px;
+        p{
+          font-size: 3.75rem;
+          color: #4C4C4C;
+          text-shadow: 0 0 9px 0 #FFFFFF;
+        }
+      }
+
+      .search-bar{
+        margin-bottom: 2rem;
+        form{
+          .input-group{
+            background-color: #FFFFFF;
+            width: 62%;
+            box-shadow: 0 4px 20px 0 rgba(0,0,0,0.14);
+            border-radius: 10px;
+            span{
+              opacity: 0.6;
+              padding: 1rem;
+            }
+            .search-text-box{
+              color: #BDBDBD;
+              font-size: 16px;
+              padding-left: 0;
+              border: none;
+              height: 4rem;
+            }
+          }
+        }
+      }
+
+      .row2{
+        width:63%;
+        padding:0;
+        padding-bottom: 17rem;
+        margin-left: 0px;
+        
+        div{
+          background-color: #FFFFFF;
+          padding-left: 0;
+          margin-bottom: 5px;
+          form{
+            border-radius: 10px;
+            box-shadow: 0 4px 20px 0 rgba(0,0,0,0.14);
+            .input-group{
+              input{
+                height: 4rem;             
+              }
+              input,
+              .now-icon,
+              .gps-icon,
+              .pin-icon{
+                border: none;
+                background-color: #FFFFFF;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+  }

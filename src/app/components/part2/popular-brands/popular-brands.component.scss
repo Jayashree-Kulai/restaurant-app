@@ -1,0 +1,122 @@
+@import '../../../../../src/styles.scss';
+@import '../../../../../src/styles-variables.scss';
+
+.container-fluid {
+    background-image: url("../../../../assets/logo_pattern.jpeg");
+    min-height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+    background-size: cover;
+    font-family: "Open Sans";
+    
+    .container{
+        .popular-brands{
+            padding-top: 3rem;
+            color: #4C4C4C;
+            font-size: 3.125rem;
+        }
+
+        .find-out-more-about {
+            color: #4C4C4C;
+            font-size: 1.125rem;
+        }
+
+        .card{
+            margin-top:2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 23px 0 rgba(34,34,34,0.04);
+              .row{
+                .left{
+                    img{
+                        border-top-left-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        height: 15rem;
+                    }
+                }
+            
+                .right{
+                    .card-body{
+                        .card-title{   
+                            .row{
+                                padding-bottom: 3%;
+                                border-bottom: 1px solid #EDEDED;
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                .photo{
+                                    img{
+                                        height: 86px;
+                                        width: 86px;
+                                        border-radius: 50%;
+  
+                                    }
+                                }
+                                
+                                .brand-name{
+                                    padding-left: 1.5rem;
+                                    padding-top: 10px;
+                                    .kfc{
+                                        color: #223136;
+                                        font-size: 1.813rem;
+                                        font-weight: 600;
+                                        margin-bottom: 0;
+                                    }
+                                    
+                                    .latin-american-bake{
+                                        color: #757575;
+                                        font-size: 0.875rem;
+                                    }
+                                }
+                            }
+
+                        }
+                        .card-text{
+                            margin-left: 10px;
+                            color: #6A6A6A;
+                            font-family: "Open Sans";
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+              } 
+
+        }
+
+        .naming{
+            margin-top: 1rem;
+            .float-left{           
+                .all-brands{
+                    
+                    color:#F67E03;
+                    font-size: 16px; 
+                }
+            }
+                .pager{
+                    font-family: "Open Sans";
+                    font-size: 22px;
+                    font-weight: 900;
+                    line-height: 36px;
+                        a{
+                            display: inline-block;
+                            height: 57px;
+                            width: 56px;
+                            //width: 66px;
+                            font-size: 35px;
+                            height: 40px;
+                            padding-right: 5%;
+                            border-radius: 6px;
+                            background-color: white;
+                            color: black;
+                            box-shadow: 1px 2px 11px 0 rgba(198,188,188,0.17);
+                        
+                            .previous{
+                                margin-left: 1%;
+                            }
+                        }
+                
+                }
+            }
+    }
+}
