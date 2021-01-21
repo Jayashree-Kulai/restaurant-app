@@ -11,7 +11,7 @@
     z-index: -1;
     background-size: cover;
     font-family: "Open Sans";
-    
+    padding-bottom: 3rem;
     .container{
         .popular-brands{
             padding-top: 3rem;
@@ -98,14 +98,12 @@
                     font-size: 22px;
                     font-weight: 900;
                     line-height: 36px;
-                        a{
+                    button{
                             display: inline-block;
                             height: 57px;
                             width: 56px;
-                            //width: 66px;
                             font-size: 35px;
                             height: 40px;
-                            padding-right: 5%;
                             border-radius: 6px;
                             background-color: white;
                             color: black;

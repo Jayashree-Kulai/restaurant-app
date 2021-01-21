@@ -24,10 +24,11 @@
         margin-bottom: 2rem;
         form{
           .input-group{
+            border-radius: 10px;
             background-color: #FFFFFF;
             width: 62%;
             box-shadow: 0 4px 20px 0 rgba(0,0,0,0.14);
-            border-radius: 10px;
+            
             span{
               opacity: 0.6;
               padding: 1rem;
@@ -50,13 +51,15 @@
         margin-left: 0px;
         
         div{
-          background-color: #FFFFFF;
+          
           padding-left: 0;
           margin-bottom: 5px;
           form{
+            background-color: #FFFFFF;
             border-radius: 10px;
             box-shadow: 0 4px 20px 0 rgba(0,0,0,0.14);
             .input-group{
+              border-radius: 10px;
               input{
                 height: 4rem;             
               }
